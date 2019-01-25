@@ -24,6 +24,7 @@ namespace Deliverable2_Iterative
                 // variable used to count number of iterations
                 int i = value_of_input;
 
+                // if statement to check if value is between 0 and 100
                 if (value_of_input > 0 && value_of_input <= 100)
                     {
                     
@@ -41,13 +42,15 @@ namespace Deliverable2_Iterative
                     Console.ReadKey(true);
 
                 }
+                // else if statement when over 100, prompts to continue
                 else if (value_of_input > 100)
                 {
+                    // prompt warning and asking user to continue
                     Console.WriteLine("Warning: You have enetered an integer value over 100.");
                     Console.WriteLine("This may cause the program to run for an extended period of time.");
                     Console.WriteLine("To continue at own risk press Enter. Otherwise press any key twice to close the program.");
 
-
+                    // if stetemnt to see if Enter key pressed
                     if (Console.ReadKey(true).Key == ConsoleKey.Enter)
                     {
                         // do while loop to perform operation
@@ -63,10 +66,10 @@ namespace Deliverable2_Iterative
                         Console.ReadKey(true);
                     }
                     
-                        Console.ReadKey(true);
+                        Console.ReadKey(true); // closes program upon user input
 
                 }
-                else
+                else // user prompted if proper value not enetered
                 {
                     Console.WriteLine("Please enter an integer between 1 and 100.");
                     Console.WriteLine("Press any key to exit the program and try again");
@@ -74,7 +77,7 @@ namespace Deliverable2_Iterative
                 }
                 
             } // end of try
-            catch
+            catch // catch block to report any errors to user
             {
                 Console.WriteLine("Please enter an integer value and try running the program again");
                 Console.WriteLine("Press any key to exit the program");
